@@ -1,0 +1,232 @@
+<% const data = {
+    'title': 'Главная',
+    'flowContainerClass': 'flow-container--main'
+} %>
+
+<%- require("../layouts/header.ejs")(data) %>
+
+<% const orderList = [
+    {
+        orderDelivery: {
+            status: 'inDelivery',
+            number: '357765'
+        },
+        pay: {
+            method: 'Оплачено картой',
+            price: 1344
+        },
+        address: [
+            {
+                title: 'Адрес доставки',
+                info: 'г. Санкт-Петербург, улица Нахимова, 10к1, 88',
+            },
+            {
+                title: 'Примерное время доставки',
+                info: '23 марта 15:00 – 16:00'
+            }
+        ],
+        statuses: {
+            paid: true,
+            collect: true,
+            delivery: true,
+            delivered: true
+        },
+        products: [
+            {
+                imageUrl: '../images/content/order-item-image-1.png',
+                title: 'Феназепам, 50 таблеток',
+                additionalInfo: 'Курьер попросит рецепт',
+                price: '542'
+            },
+            {
+                imageUrl: '../images/content/order-item-image-2.png',
+                title: 'Арбидол, капсулы 100 мг, 10 шт.',
+                additionalInfo: false,
+                price: '282'
+            },
+            {
+                imageUrl: '../images/content/order-item-image-3.png',
+                title: 'Максилак синбиотик капсулы, 10 шт.',
+                additionalInfo: false,
+                price: '520'
+            }
+        ]
+    },
+    {
+        orderDelivery: {
+            status: 'delivered',
+            date: '11 мая',
+            number: '357765'
+        },
+        pay: {
+            method: 'Оплачено онлайн',
+            price: 654
+        },
+        address: [
+            {
+                title: 'Адрес доставки',
+                info: 'г. Санкт-Петербург, улица Нахимова, 10к1, 88',
+            },
+            {
+                title: 'Примерное время доставки',
+                info: '23 марта 15:00 – 16:00'
+            }
+        ],
+        statuses: {
+            paid: true,
+            collect: true,
+            delivery: true,
+            delivered: true
+        },
+        products: [
+            {
+                imageUrl: '../images/content/order-item-image-4.png',
+                title: 'Феназепам, 50 таблеток',
+                additionalInfo: 'Курьер попросит рецепт',
+                price: '542'
+            },
+            {
+                imageUrl: '../images/content/order-item-image-2.png',
+                title: 'Арбидол, капсулы 100 мг, 10 шт.',
+                additionalInfo: false,
+                price: '282'
+            },
+            {
+                imageUrl: '../images/content/order-item-image-3.png',
+                title: 'Максилак синбиотик капсулы, 10 шт.',
+                additionalInfo: false,
+                price: '520'
+            }
+        ]
+    },
+    {
+        orderDelivery: {
+            status: 'delivered',
+            date: '25 марта',
+            number: '357632'
+        },
+        pay: {
+            method: 'Оплачено наличными',
+            price: 778
+        },
+        address: [
+            {
+                title: 'Адрес доставки',
+                info: 'г. Санкт-Петербург, улица Нахимова, 10к1, 88',
+            },
+            {
+                title: 'Примерное время доставки',
+                info: '23 марта 15:00 – 16:00'
+            }
+        ],
+        statuses: {
+            paid: true,
+            collect: true,
+            delivery: true,
+            delivered: false
+        },
+        products: [
+            {
+                imageUrl: '../images/content/order-item-image-5.png',
+                title: 'Феназепам, 50 таблеток',
+                additionalInfo: 'Курьер попросит рецепт',
+                price: '542'
+            },
+            {
+                imageUrl: '../images/content/order-item-image-2.png',
+                title: 'Арбидол, капсулы 100 мг, 10 шт.',
+                additionalInfo: false,
+                price: '282'
+            },
+            {
+                imageUrl: '../images/content/order-item-image-3.png',
+                title: 'Максилак синбиотик капсулы, 10 шт.',
+                additionalInfo: false,
+                price: '520'
+            },
+            {
+                imageUrl: '../images/content/order-item-image-4.png',
+                title: 'Максилак синбиотик капсулы, 10 шт.',
+                additionalInfo: false,
+                price: '520'
+            }
+        ]
+    }
+] %>
+
+<section class="section profile">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-12 profile__sidebar">
+                <div class="profile__info">
+                    <div class="profile__avatar">БИ</div>
+                    <div class="profile__name">Богдан <br> Игнатенков</div>
+                    <a href="#" class="profile__change">Изменить профиль</a>
+                    <nav class="nav profile__nav">
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Активировать сертификат</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a href="#" class="nav-link">Мои заказы</a>
+                                <a class="nav-delivery">
+                                    <div class="nav-delivery__text">В доставке</div>
+                                    <div class="nav-delivery__counter">1</div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Избранное</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Помощь</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Обратная связь</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="col-md-9 col-12 profile__content">
+                <h1 class="profile__page-title">Мои заказы
+                    <span class="profile__orders-counter">3</span>
+                </h1>
+                <div class="orders">
+                    <div class="orders__list">
+                        <% orderList.forEach(function(item, index) { %>
+                            <%- require("../components/elements/order-item.ejs")({item: item}) %>
+                        <% }); %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section download-app">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 download-app__col">
+                <div class="download-app__title">
+                    Скачай приложение <br>
+                    и экономь еще больше
+                </div>
+                <div class="download-app__list">
+                    <div class="download-app-item">
+                        <a href="#" class="download-app-item__link">
+                            <img src="../images/app-store.svg" alt="" class="download-app-item__image">
+                        </a>
+                    </div>
+                    <div class="download-app-item">
+                        <a href="#" class="download-app-item__link">
+                            <img src="../images/google-play.svg" alt="" class="download-app-item__image">
+                        </a>
+                    </div>
+                </div>
+                <img src="../images/device.png" alt="" class="download-app__device">
+            </div>
+        </div>
+    </div>
+</section>
+
+<%- require("../layouts/footer.ejs")() %>

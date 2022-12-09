@@ -1,0 +1,18 @@
+@import "../variables";
+@import '../typography';
+
+.phone {
+  color: var(--c-black);
+  &__link {
+    @include font18lh22;
+    color: inherit;
+
+    &:hover {
+      color: var(--c-violet);
+    }
+  }
+  &__text {
+    @include font12lh15;
+    opacity: .5;
+  }
+}

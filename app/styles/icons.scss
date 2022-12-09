@@ -1,0 +1,52 @@
+@import "variables";
+
+.i-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1em;
+  background-repeat: no-repeat;
+  background-position: center;
+  fill: currentColor;
+}
+
+.i-person {
+  width: 17px;
+  height: 18px;
+  fill: var(--c-violet);
+}
+
+.i-basket {
+  width: 33px;
+  height: 33px;
+  fill: var(--c-violet);
+}
+
+.i-paid {
+  width: 24px;
+  height: 24px;
+  fill: var(--c-white);
+}
+
+.i-order-collect {
+  width: 24px;
+  height: 24px;
+  fill: var(--c-white);
+}
+
+.i-order-in-delivery {
+  width: 30px;
+  height: 30px;
+  fill: var(--c-white);
+}
+
+.i-order-delivered {
+  width: 26px;
+  height: 26px;
+  fill: var(--c-white);
+}
+
+.i-phone {
+  width: 19px;
+  height: 20px;
+}

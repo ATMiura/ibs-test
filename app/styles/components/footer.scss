@@ -1,0 +1,53 @@
+@import "../variables";
+@import "../typography";
+
+.footer {
+  padding: 47px 0 19px;
+  background: var(--c-white-2);
+
+  &-col {
+    &__title {
+      margin-bottom: 34px;
+
+      font-weight: 500;
+      @include font18lh22;
+      color: var(--c-black);
+    }
+  }
+
+  &__nav {
+    .nav-list {
+      gap: 20px 0;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+    .nav-item {
+      width: 100%;
+
+      @include font14lh17;
+      color: var(--c-grey-1);
+
+      &--green {
+        color: var(--c-green);
+      }
+    }
+
+    &--two-cols {
+      .nav-item {
+        max-width: 50%;
+        width: 100%;
+      }
+    }
+  }
+
+  &-top {
+    margin-bottom: 68px;
+  }
+
+  &-bottom {
+    &__container {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+<% const subMenu = [
+    {
+        id: 1,
+        text: 'Продукты'
+    },
+    {
+        id: 2,
+        text: 'Косметика'
+    },
+    {
+        id: 3,
+        text: 'Техника'
+    }
+] %>
+
+<%- require("./dropdown.ejs")({item: {id: 'catalog', text: 'Каталог'}, className: 'button button--catalog', data: subMenu}) %>

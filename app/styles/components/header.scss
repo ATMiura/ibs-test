@@ -1,0 +1,39 @@
+.header {
+  margin-bottom: 36px;
+
+  &-top {
+    padding: 18px 0 13px;
+
+    &__row {
+      justify-content: space-between;
+    }
+
+    &__right {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+  &__phone {
+    margin-right: 22px;
+  }
+  &__user {
+
+  }
+  &__logo {
+    margin-right: 26px;
+  }
+  &__catalog {
+    margin-right: 12px;
+  }
+  &__search {
+    flex: 1 1;
+    margin-right: 18px;
+  }
+
+  &-main {
+    &__container {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

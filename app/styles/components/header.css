@@ -1,0 +1,32 @@
+.header {
+  margin-bottom: 36px;
+}
+.header-top {
+  padding: 18px 0 13px;
+}
+.header-top__row {
+  justify-content: space-between;
+}
+.header-top__right {
+  display: flex;
+  justify-content: flex-end;
+}
+.header__phone {
+  margin-right: 22px;
+}
+.header__logo {
+  margin-right: 26px;
+}
+.header__catalog {
+  margin-right: 12px;
+}
+.header__search {
+  flex: 1 1;
+  margin-right: 18px;
+}
+.header-main__container {
+  display: flex;
+  align-items: center;
+}
+
+/*# sourceMappingURL=header.css.map */

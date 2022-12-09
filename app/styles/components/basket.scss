@@ -1,0 +1,26 @@
+@import "../variables";
+@import "../typography";
+@import "../helpers";
+
+.basket {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+
+  &__icon {
+    margin-right: 8px;
+  }
+
+  &__text {
+    margin-right: 8px;
+
+    @include font18lh22;
+    color: var(--c-violet);
+  }
+
+  &__counter {
+    @include counter;
+    @include font14lh17;
+    color: var(--c-white);
+  }
+}

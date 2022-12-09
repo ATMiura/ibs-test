@@ -1,0 +1,55 @@
+@custom-media --mobile-xs (max-width: 480px);
+@custom-media --mobile-s (max-width: 650px);
+@custom-media --mobile (max-width: 800px);
+@custom-media --mobile-above (min-width: 751px);
+@custom-media --tablet-below (max-width: 900px);
+@custom-media --tablet (max-width: 1000px);
+@custom-media --tablet-above (max-width: 1280px);
+@custom-media --desktop (min-width: 1367px) and (max-width: 1920px);
+@custom-media --desktop-below (max-width: 1365px);
+@custom-media --desktop-above (max-width: 1439px);
+@custom-media --container-below (max-width: 1440px);
+@custom-media --full (width: 1920px);
+@custom-media --full-below (max-width: 1919px);
+@custom-media --height-700 (min-height: 700px);
+@custom-media --height-900 (min-height: 900px);
+@custom-media --height-1000 (min-height: 1000px);
+:root {
+  --c-black: black;
+  --c-white: white;
+  --c-white-1: #FAFAFA;
+  --c-white-2: #FBFBFB;
+  --c-green: #21A038;
+  --c-violet: #8168F0;
+  --c-red: #E9404A;
+  --c-yellow: #FFDF00;
+  --c-grey-1: #888888;
+  --c-grey-2: #8A8C94;
+  --c-grey-3: #B3B7C5;
+  --c-grey-4: #C4C4C4;
+  --c-grey-5: #DDDFE0;
+  --c-grey-6: #B7B3B3;
+  --c-grey-7: #C1C4C7;
+  --c-grey-8: #DBDCE1;
+  --c-grey-9: #F3F3F3;
+  --border: #F0F0F0;
+  --inputBg: #EDEDED;
+  --inputBorder: #CFCFCF;
+  --placeholder: #B6ACA0;
+  --boxShadow: 0px 30px 55px rgba(0, 0, 0, 0.1);
+  --borderRadius: 6px;
+  --transition: .2s;
+}
+
+.user__dropdown {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--c-violet);
+}
+.user__icon {
+  margin-right: 8px;
+}
+
+/*# sourceMappingURL=user.css.map */

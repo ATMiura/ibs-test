@@ -1,0 +1,13 @@
+<nav class="nav">
+    <ul class="nav-list">
+        <% data.forEach(function(item, index) { %>
+            <li class="nav-item">
+                <% if(item.subMenu) { %>
+                    <%- require("./dropdown.ejs")({item: item, className: 'nav-link', data: item.subMenu}) %>
+                <% } else { %>
+                    <a href="#" class="nav-link"><%= item.text %></a>
+                <% } %>
+            </li>
+        <% }); %>
+    </ul>
+</nav>

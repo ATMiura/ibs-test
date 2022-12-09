@@ -1,0 +1,20 @@
+@import "../variables";
+@import "../typography";
+
+.privacy {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+
+  @include font14lh17;
+  color: var(--c-grey-1);
+
+  &__link {
+    color: inherit;
+  }
+
+  &__info {
+    opacity: .4;
+  }
+}

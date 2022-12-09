@@ -1,0 +1,22 @@
+@import "../variables";
+@import '../typography';
+
+.nav {
+  &-list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &-item {
+    @include font16lh19;
+    color: var(--c-violet);
+  }
+  &-link {
+    padding: 0;
+    color: inherit;
+  }
+}

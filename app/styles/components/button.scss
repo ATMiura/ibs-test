@@ -1,0 +1,28 @@
+@import "../variables";
+@import "../typography";
+
+.button {
+  display: inline-block;
+  height: 50px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+
+  &--catalog {
+    @include font18lh22;
+    line-height: 50px;
+    font-weight: 500;
+    color: var(--c-white);
+    padding: 0 22px;
+    background: linear-gradient(270.1deg, #8168F0 8.74%, #68F096 99.91%);
+
+    &:hover {
+      color: var(--c-white);
+      text-decoration: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+}

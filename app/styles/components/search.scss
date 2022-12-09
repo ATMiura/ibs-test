@@ -1,0 +1,25 @@
+@import "../variables";
+
+.search {
+  &__form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  &__input {
+    width: 100%;
+    padding: 0 15px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  &__btns {
+
+  }
+  &__submit {
+    padding: 0 17px;
+    border: 0;
+    outline: none;
+    background: var(--c-violet);
+    border-radius: 0 5px 5px 0;
+  }
+}

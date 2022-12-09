@@ -1,0 +1,61 @@
+@import "variables.scss";
+@import "media.scss";
+
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100vh;
+  font-size: 16px;
+  line-height: 1.5;
+
+  @media (max-width: 991px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 12px;
+  }
+}
+
+body {
+  min-height: inherit;
+  font-family: 'Inter', 'Open Sans', sans-serif;
+  color: var(--c-black);
+  overflow-x: hidden;
+  background-color: #fff;
+
+  &.overflow-hidden {
+
+  }
+}
+
+#svg-sprite {
+  display: none !important;
+}
+
+.flow-container {
+  display: flex;
+  flex-flow: column;
+  min-height: inherit;
+  overflow-x: hidden;
+  z-index: 3;
+}
+
+.content {
+  position: relative;
+  display: block;
+  flex: 1 0 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  &:hover {
+    color: var(--c-violet);
+  }
+}

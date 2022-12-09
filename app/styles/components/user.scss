@@ -1,0 +1,15 @@
+@import "../variables";
+@import "../typography";
+
+.user {
+  &__dropdown {
+    display: flex;
+    align-items: center;
+
+    @include font16lh19;
+    color: var(--c-violet);
+  }
+  &__icon {
+    margin-right: 8px;
+  }
+}

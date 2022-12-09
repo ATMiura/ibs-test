@@ -1,0 +1,96 @@
+@import "../variables";
+@import "../typography";
+@import "../helpers";
+
+.profile {
+  &__sidebar {
+
+  }
+
+  &__info {
+
+  }
+
+  &__avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 90px;
+    height: 90px;
+
+    margin-bottom: 13px;
+
+    background: var(--c-grey-8);
+    border-radius: 100%;
+
+    @include font34lh41;
+    color: var(--c-white);
+  }
+
+  &__name {
+    margin-bottom: 14px;
+    @include font24lh29;
+  }
+
+  &__change {
+    display: inline-block;
+    margin-bottom: 44px;
+
+    @include font16lh19;
+    font-weight: 500;
+    color: var(--c-green);
+  }
+
+  &__nav {
+    .nav-list {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .nav-item,
+    .nav-delivery {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-item {
+      font-weight: 500;
+      @include font17lh21;
+      color: var(--c-grey-2);
+
+      &.active {
+        color: var(--c-black);
+      }
+    }
+
+    .nav-delivery {
+      margin-left: 4px;
+      text-decoration: none;
+
+      &__text {
+        margin-right: 4px;
+        @include font17lh21;
+        color: var(--c-violet);
+      }
+
+      &__counter {
+        @include counter;
+        @include font14lh17;
+        color: var(--c-white);
+      }
+    }
+  }
+
+  &__page-title {
+    margin-bottom: 32px;
+    @include font36lh44;
+  }
+
+  &__orders-counter {
+    display: inline-block;
+    margin-left: 12px;
+    color: var(--c-grey-2);
+  }
+}

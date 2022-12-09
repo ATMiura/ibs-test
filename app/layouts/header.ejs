@@ -1,0 +1,80 @@
+<!-- (c) Digital Element || http://www.d-element.ru/ -->
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=61536017-f4a7-4aaf-a708-fa73ef88c02d&amp;lang=ru_RU"
+            type="text/javascript"></script>
+</head>
+<body>
+<div class="flow-container <%= flowContainerClass && flowContainerClass %>">
+    <% const navList = [
+        {
+            id: 1,
+            text: 'Санкт-Петербург',
+            subMenu: [
+                {
+                    id: 4,
+                    text: 'Москва'
+                },
+                {
+                    id: 5,
+                    text: 'Краснодар'
+                },
+                {
+                    id: 6,
+                    text: 'Ростов'
+                }
+            ]
+        },
+        {
+            id: 2,
+            text: 'Доставка и оплата'
+        },
+        {
+            id: 3,
+            text: 'Гарантия и возврат'
+        }] %>
+
+    <div class="content">
+        <header class="header">
+            <div class="header-top">
+                <div class="container header__container">
+                    <div class="row header-top__row">
+                        <div class="col header-top__nav">
+                            <%- require("../components/elements/nav.ejs")({data: navList}) %>
+                        </div>
+                        <div class="col header-top__right">
+                            <div class="header__phone">
+                                <div class="phone">
+                                    <%- require("../components/elements/phone.ejs")() %>
+                                </div>
+                            </div>
+                            <div class="header__user">
+                                <div class="user">
+                                    <%- require("../components/elements/user.ejs")() %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-main">
+                <div class="container header-main__container">
+                    <div class="header__logo">
+                        <%- require("../components/elements/logo.ejs")() %>
+                    </div>
+                    <div class="header__catalog">
+                        <%- require("../components/elements/header-catalog.ejs")() %>
+                    </div>
+                    <div class="header__search">
+                        <%- require("../components/elements/search.ejs")() %>
+                    </div>
+                    <div class="header__basket">
+                        <%- require("../components/elements/basket.ejs")() %>
+                    </div>
+                </div>
+            </div>
+        </header>

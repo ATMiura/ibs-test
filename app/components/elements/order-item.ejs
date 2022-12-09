@@ -1,0 +1,87 @@
+<div class="order-item <%= item.orderDelivery.status === 'delivered' ? 'collapsed' : '' %>">
+    <div class="order__head">
+        <div class="order-delivery">
+            <div class="order-delivery__title">
+                <%= item.orderDelivery.status === 'inDelivery' ? 'В доставке' : 'Доставлен' %>
+                <%= item.orderDelivery.date ? item.orderDelivery.date : '' %>
+            </div>
+            <div class="order-delivery__number">№<%= item.orderDelivery.number %></div>
+        </div>
+        <% if(item.orderDelivery.status !== 'inDelivery') { %>
+            <div class="order__callback">
+                <div class="callback"></div>
+            </div>
+        <% } %>
+        <div class="order-pay">
+            <div class="order-pay__title"><%= item.pay.method ? item.pay.method : ''  %></div>
+            <div class="order-pay__cost"><%= item.pay.price %> ₽</div>
+        </div>
+    </div>
+    <div class="order-info">
+        <% item.address.forEach(function(item, index) { %>
+            <div class="order-info-item">
+                <div class="order-info-item__title"><%= item.title %></div>
+                <div class="order-info-item__text"><%= item.info %></div>
+            </div>
+        <% }); %>
+    </div>
+    <div class="order-status">
+        <div class="order-status-item <%= item.statuses.paid ? 'active' : '' %>">
+            <div class="order-status-item__icon">
+                <svg class="i-icon i-paid">
+                    <use xlink:href="#i-paid"></use>
+                </svg>
+            </div>
+            <div class="order-status-item__description">Оплачено</div>
+        </div>
+        <div class="order-status-item <%= item.statuses.collect ? 'active' : '' %>">
+            <div class="order-status-item__icon">
+                <svg class="i-icon i-order-collect">
+                    <use xlink:href="#i-order-collect"></use>
+                </svg>
+            </div>
+            <div class="order-status-item__description">Собрано</div>
+        </div>
+        <div class="order-status-item <%= item.statuses.delivery ? 'active'  : '' %>">
+            <div class="order-status-item__icon">
+                <svg class="i-icon i-order-in-delivery">
+                    <use xlink:href="#i-order-in-delivery"></use>
+                </svg>
+            </div>
+            <div class="order-status-item__description">В доставке</div>
+        </div>
+        <div class="order-status-item <%= item.statuses.delivered ? 'active'  : '' %>">
+            <div class="order-status-item__icon">
+                <svg class="i-icon i-order-delivered">
+                    <use xlink:href="#i-order-delivered"></use>
+                </svg>
+            </div>
+            <div class="order-status-item__description">Получено</div>
+        </div>
+    </div>
+    <div class="order-products">
+        <% item.products.forEach(function(item, index) { %>
+            <div class="order-product">
+                <picture class="order-product__picture">
+                    <img src="<%= item.imageUrl %>" alt="" class="order-product__image">
+                </picture>
+                <div class="order-product__info">
+                    <div class="order-product__title"><%= item.title %></div>
+                    <div class="order-product__links">
+                        <a href="#" class="order-product__link">Инструкция по применению</a>
+                        <a href="#" class="order-product__link">Условия хранения</a>
+                    </div>
+                    <% if(item.additionalInfo) { %>
+                        <div class="order-product__additional"><%= item.additionalInfo %></div>
+                    <% } %>
+                </div>
+                <div class="order-product__price"><%= item.price %> ₽</div>
+            </div>
+        <% }); %>
+    </div>
+    <% if(item.orderDelivery.status === 'delivered') { %>
+        <div class="order-all">
+            <a href="#" class="order-all__toggle">Все товары</a>
+        </div>
+    <% } %>
+</div>
