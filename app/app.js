@@ -52,4 +52,9 @@ document.addEventListener('DOMContentLoaded', function() {
     App.Utils = new Utils();
     App.SvgUse = new SvgUse();
     App.Media = new Media();
+
+    $('.js-order-toggle').on('click', function (e) {
+      e.preventDefault();
+      $(this).closest('.order-item').toggleClass('collapsed');
+    })
 });

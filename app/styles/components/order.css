@@ -65,9 +65,20 @@
 .order-item:not(:last-child) {
   margin-bottom: 28px;
 }
+.order-item .order__head,
+.order-item .order-info,
+.order-item .order-status,
+.order-item .order-products {
+  transition: 0.2s;
+}
 .order-item.collapsed .order-info,
 .order-item.collapsed .order-status {
-  display: none;
+  margin: 0;
+  padding: 0;
+  height: 0;
+  max-height: 0;
+  visibility: hidden;
+  overflow: hidden;
 }
 .order-item.collapsed .order-products {
   display: flex;

@@ -14,10 +14,22 @@
       margin-bottom: 28px;
     }
 
+    #{$order}__head,
+    #{$order}-info,
+    #{$order}-status,
+    #{$order}-products {
+      transition: .2s;
+    }
+
     &.collapsed {
       #{$order}-info,
       #{$order}-status {
-        display: none;
+        margin: 0;
+        padding: 0;
+        height: 0;
+        max-height: 0;
+        visibility: hidden;
+        overflow: hidden;
       }
       #{$order}-products {
         display: flex;
