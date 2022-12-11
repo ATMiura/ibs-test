@@ -12,6 +12,7 @@
     }
   }
   &__text {
+    margin-top: -3px;
     @include font12lh15;
     opacity: .5;
   }

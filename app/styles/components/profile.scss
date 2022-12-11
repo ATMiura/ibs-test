@@ -4,33 +4,51 @@
 
 .profile {
   &__sidebar {
-
+    @media (max-width: 991px) {
+      margin-bottom: 30px;
+    }
   }
 
-  &__info {
-
-  }
-
-  &__avatar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 90px;
-    height: 90px;
-
-    margin-bottom: 13px;
-
-    background: var(--c-grey-8);
-    border-radius: 100%;
-
-    @include font34lh41;
-    color: var(--c-white);
-  }
-
-  &__name {
+  &-user {
     margin-bottom: 14px;
-    @include font24lh29;
+
+    &__avatar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      min-width: 90px;
+      width: 90px;
+      height: 90px;
+
+      margin-bottom: 13px;
+
+      background: var(--c-grey-8);
+      border-radius: 100%;
+
+      @include font34lh41;
+      color: var(--c-white);
+    }
+
+    &__name {
+      @include font24lh29;
+    }
+
+    @media (max-width: 991px) {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+
+      &__avatar {
+        margin-right: 15px;
+        margin-bottom: 0;
+      }
+      &__name {
+        br {
+          display: none;
+        }
+      }
+    }
   }
 
   &__change {
@@ -40,6 +58,10 @@
     @include font16lh19;
     font-weight: 500;
     color: var(--c-green);
+
+    @media (max-width: 991px) {
+      margin-bottom: 30px;
+    }
   }
 
   &__nav {
@@ -47,6 +69,10 @@
       flex-direction: column;
       align-items: flex-start;
       gap: 20px;
+
+      @media (max-width: 991px) {
+        gap: 10px;
+      }
     }
 
     .nav-item,
@@ -83,6 +109,12 @@
     }
   }
 
+  &__content {
+    @media (min-width: 992px) {
+      padding-top: 12px;
+    }
+  }
+
   &__page-title {
     margin-bottom: 32px;
     @include font36lh44;
@@ -90,7 +122,6 @@
 
   &__orders-counter {
     display: inline-block;
-    margin-left: 12px;
     color: var(--c-grey-2);
   }
 }

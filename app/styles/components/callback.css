@@ -57,6 +57,10 @@
 }
 .callback__text {
   display: inline-block;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 /*# sourceMappingURL=callback.css.map */

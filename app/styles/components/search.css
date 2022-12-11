@@ -53,6 +53,7 @@
   border-bottom-right-radius: 0;
 }
 .search__submit {
+  width: 57px;
   padding: 0 17px;
   border: 0;
   outline: none;

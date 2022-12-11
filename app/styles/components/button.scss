@@ -2,18 +2,22 @@
 @import "../typography";
 
 .button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   height: 50px;
   border-radius: 5px;
   text-align: center;
   text-decoration: none;
 
   &--catalog {
+    width: 100%;
+    padding: 0 22px;
+
     @include font18lh22;
     line-height: 50px;
     font-weight: 500;
     color: var(--c-white);
-    padding: 0 22px;
     background: linear-gradient(270.1deg, #8168F0 8.74%, #68F096 99.91%);
 
     &:hover {
@@ -21,8 +25,9 @@
       text-decoration: none;
     }
 
-    &::after {
-      display: none;
+    &.dropdown-toggle::after {
+      margin-left: 13px;
+      background-image: url("data:image/svg+xml,%3Csvg width='14' height='9' viewBox='0 0 14 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.75 1L6.75 7L12.75 1' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A");
     }
   }
 }

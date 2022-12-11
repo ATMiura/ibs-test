@@ -52,10 +52,25 @@
   line-height: 22px;
   color: var(--c-black);
 }
+@media (max-width: 767px) {
+  .footer-col__title {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .footer-col:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
 .footer__nav .nav-list {
   gap: 20px 0;
   flex-wrap: wrap;
   align-items: flex-start;
+}
+@media (max-width: 767px) {
+  .footer__nav .nav-list {
+    gap: 10px 0;
+  }
 }
 .footer__nav .nav-item {
   width: 100%;
@@ -70,12 +85,37 @@
   max-width: 50%;
   width: 100%;
 }
+@media (max-width: 767px) {
+  .footer__nav--two-cols .nav-item:nth-child(even) {
+    padding-left: 15px;
+  }
+}
+@media (max-width: 575px) {
+  .footer__nav--two-cols .nav-item {
+    max-width: 100%;
+  }
+  .footer__nav--two-cols .nav-item:nth-child(even) {
+    padding-left: initial;
+  }
+}
 .footer-top {
-  margin-bottom: 68px;
+  margin-bottom: 80px;
+}
+@media (max-width: 991px) {
+  .footer-top {
+    margin-bottom: 30px;
+  }
 }
 .footer-bottom__container {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+}
+@media (max-width: 991px) {
+  .footer-bottom__container {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 }
 
 /*# sourceMappingURL=footer.css.map */

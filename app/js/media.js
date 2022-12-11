@@ -5,11 +5,18 @@ export default class Media {
     }
 
     handler() {
-        if ($(window).width() <= 1200) {
-            $('[data-desktop="sub-directory"]').find($('[data-move="sub-directory"]')).appendTo('[data-mobile="sub-directory"]');
+        if ($(window).width() <= 991) {
+            $('[data-media-query="header-main-container"]').find($('[data-move="header-basket"]')).appendTo('[data-media-query="header-top-right"]');
         }
         else {
-            $('[data-mobile="sub-directory"]').find($('[data-move="sub-directory"]')).appendTo('[data-desktop="sub-directory"]');
+          $('[data-media-query="header-top-right"]').find($('[data-move="header-basket"]')).appendTo('[data-media-query="header-main-container"]');
+        }
+
+        if ($(window).width() <= 575) {
+            $('[data-media-query="header-top-container"]').find($('[data-move="header-top-row"]')).appendTo('[data-media-query="mobile-menu"]');
+        }
+        else {
+          $('[data-media-query="mobile-menu"]').find($('[data-move="header-top-row"]')).appendTo('[data-media-query="header-top-container"]');
         }
     }
 

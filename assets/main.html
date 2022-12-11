@@ -17,8 +17,8 @@
     <div class="content">
         <header class="header">
             <div class="header-top">
-                <div class="container header__container">
-                    <div class="row header-top__row">
+                <div class="container header__container" data-media-query="header-top-container">
+                    <div class="row header-top__row" data-move="header-top-row">
                         <div class="col header-top__nav">
                             <nav class="nav">
     <ul class="nav-list">
@@ -60,19 +60,16 @@
 </nav>
 
                         </div>
-                        <div class="col header-top__right">
+                        <div class="col header-top__right" data-media-query="header-top-right">
                             <div class="header__phone">
                                 <div class="phone">
-                                    <div class="phone">
     <a href="tel:8 495 730 53 00" class="phone__link">8 495 730 53 00</a>
     <div class="phone__text">Круглосуточно</div>
 </div>
 
-                                </div>
                             </div>
                             <div class="header__user">
                                 <div class="user">
-                                    <div class="user">
     <div class="dropdown show">
         <a class="dropdown-toggle user__dropdown" href="#" role="button" id="dropdownMenuLink-header-user" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <div class="user__icon">
@@ -80,9 +77,7 @@
                     <use xlink:href="#i-person"></use>
                 </svg>
             </div>
-            <div class="user-dropdown dropdown">
-                <div class="user__name">Богдан</div>
-            </div>
+            <div class="user__name">Богдан</div>
         </a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink-header-user">
             <a class="dropdown-item" href="#">Профиль</a>
@@ -91,14 +86,13 @@
     </div>
 </div>
 
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="header-main">
-                <div class="container header-main__container">
+                <div class="container header-main__container" data-media-query="header-main-container">
                     <div class="header__logo">
                         <div class="logo animate" data-animate="hero-logo">
     <a href="/" class="logo__link">
@@ -130,7 +124,7 @@
                     <div class="header__search">
                         <div class="search" data-search data-clone="search">
     <form action="" class="search__form">
-        <input type="text" class="search__input input" placeholder="Поиск по сайту" data-search-input>
+        <input type="text" class="search__input input" placeholder="Название или категория товара" data-search-input>
         <div class="search__btns">
             <button class="search__submit button" type="submit">
                 <svg class="i-icon i-search">
@@ -139,11 +133,10 @@
             </button>
         </div>
     </form>
-    
 </div>
 
                     </div>
-                    <div class="header__basket">
+                    <div class="header__basket" data-move="header-basket">
                         <div class="basket">
     <div class="basket__icon">
         <svg class="i-icon i-basket">
@@ -155,6 +148,14 @@
 </div>
 
                     </div>
+
+                    <nav class="navbar-expand-sm navbar-light header__mobile">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </nav>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent" data-media-query="mobile-menu"></div>
                 </div>
             </div>
         </header>
@@ -165,11 +166,15 @@
 <section class="section profile">
     <div class="container">
         <div class="row">
-            <div class="col-md-3 col-12 profile__sidebar">
+            <div class="col-lg-3 col-12 profile__sidebar">
                 <div class="profile__info">
-                    <div class="profile__avatar">БИ</div>
-                    <div class="profile__name">Богдан <br> Игнатенков</div>
+                    <div class="profile-user">
+                        <div class="profile-user__avatar">БИ</div>
+                        <div class="profile-user__name">Богдан <br> Игнатенков</div>
+                    </div>
+
                     <a href="#" class="profile__change">Изменить профиль</a>
+
                     <nav class="nav profile__nav">
                         <ul class="nav-list">
                             <li class="nav-item">
@@ -195,8 +200,9 @@
                     </nav>
                 </div>
             </div>
-            <div class="col-md-9 col-12 profile__content">
-                <h1 class="profile__page-title">Мои заказы
+            <div class="col-lg-9 col-12 profile__content">
+                <h1 class="profile__page-title">
+                    Мои заказы
                     <span class="profile__orders-counter">3</span>
                 </h1>
                 <div class="orders">
@@ -211,6 +217,18 @@
             </div>
             <div class="order-delivery__number">№357765</div>
         </div>
+        
+            <div class="order__callback">
+                <a href="#" class="callback">
+    <div class="callback__icon">
+        <svg class="i-icon i-phone">
+            <use xlink:href="#i-phone"></use>
+        </svg>
+    </div>
+    <span class="callback__text">Связаться с нами</span>
+</a>
+
+            </div>
         
         <div class="order-pay">
             <div class="order-pay__title">Оплачено картой</div>
@@ -328,10 +346,6 @@
             <div class="order-delivery__number">№357765</div>
         </div>
         
-            <div class="order__callback">
-                <div class="callback"></div>
-            </div>
-        
         <div class="order-pay">
             <div class="order-pay__title">Оплачено онлайн</div>
             <div class="order-pay__cost">654 ₽</div>
@@ -405,7 +419,7 @@
         
             <div class="order-product">
                 <picture class="order-product__picture">
-                    <img src="../images/content/order-item-image-2.png" alt="" class="order-product__image">
+                    <img src="../images/content/order-item-image-1.png" alt="" class="order-product__image">
                 </picture>
                 <div class="order-product__info">
                     <div class="order-product__title">Арбидол, капсулы 100 мг, 10 шт.</div>
@@ -420,7 +434,7 @@
         
             <div class="order-product">
                 <picture class="order-product__picture">
-                    <img src="../images/content/order-item-image-3.png" alt="" class="order-product__image">
+                    <img src="../images/content/order-item-image-2.png" alt="" class="order-product__image">
                 </picture>
                 <div class="order-product__info">
                     <div class="order-product__title">Максилак синбиотик капсулы, 10 шт.</div>
@@ -451,10 +465,6 @@
             </div>
             <div class="order-delivery__number">№357632</div>
         </div>
-        
-            <div class="order__callback">
-                <div class="callback"></div>
-            </div>
         
         <div class="order-pay">
             <div class="order-pay__title">Оплачено наличными</div>
@@ -529,7 +539,7 @@
         
             <div class="order-product">
                 <picture class="order-product__picture">
-                    <img src="../images/content/order-item-image-2.png" alt="" class="order-product__image">
+                    <img src="../images/content/order-item-image-1.png" alt="" class="order-product__image">
                 </picture>
                 <div class="order-product__info">
                     <div class="order-product__title">Арбидол, капсулы 100 мг, 10 шт.</div>
@@ -544,7 +554,7 @@
         
             <div class="order-product">
                 <picture class="order-product__picture">
-                    <img src="../images/content/order-item-image-3.png" alt="" class="order-product__image">
+                    <img src="../images/content/order-item-image-2.png" alt="" class="order-product__image">
                 </picture>
                 <div class="order-product__info">
                     <div class="order-product__title">Максилак синбиотик капсулы, 10 шт.</div>
@@ -619,7 +629,7 @@
             <div class="footer-top">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-4 col-12 footer-col">
+                        <div class="col-lg-4 col-md-6 col-12 footer-col">
                             <div class="footer-col__title">Ассортимент</div>
                             <nav class="nav footer__nav footer__nav--two-cols">
                                 <ul class="nav-list">
@@ -650,7 +660,7 @@
                                 </ul>
                             </nav>
                         </div>
-                        <div class="offset-md-2 col-md-2 col-12 footer-col">
+                        <div class="offset-lg-2 col-md-2 col-sm-6 col-12 footer-col">
                             <div class="footer-col__title">Сервис</div>
                             <nav class="nav footer__nav">
                                 <ul class="nav-list">
@@ -669,7 +679,7 @@
                                 </ul>
                             </nav>
                         </div>
-                        <div class="offset-md-1 col-md-3 col-12 footer-col">
+                        <div class="offset-lg-1 col-md-3 col-sm-6 col-12 footer-col">
                             <div class="footer-col__title">Обратная связь</div>
                             <nav class="nav footer__nav">
                                 <ul class="nav-list">

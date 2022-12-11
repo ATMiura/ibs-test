@@ -41,28 +41,24 @@
     <div class="content">
         <header class="header">
             <div class="header-top">
-                <div class="container header__container">
-                    <div class="row header-top__row">
+                <div class="container header__container" data-media-query="header-top-container">
+                    <div class="row header-top__row" data-move="header-top-row">
                         <div class="col header-top__nav">
                             <%- require("../components/elements/nav.ejs")({data: navList}) %>
                         </div>
-                        <div class="col header-top__right">
+                        <div class="col header-top__right" data-media-query="header-top-right">
                             <div class="header__phone">
-                                <div class="phone">
-                                    <%- require("../components/elements/phone.ejs")() %>
-                                </div>
+                                <%- require("../components/elements/phone.ejs")() %>
                             </div>
                             <div class="header__user">
-                                <div class="user">
-                                    <%- require("../components/elements/user.ejs")() %>
-                                </div>
+                                <%- require("../components/elements/user.ejs")() %>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="header-main">
-                <div class="container header-main__container">
+                <div class="container header-main__container" data-media-query="header-main-container">
                     <div class="header__logo">
                         <%- require("../components/elements/logo.ejs")() %>
                     </div>
@@ -72,9 +68,17 @@
                     <div class="header__search">
                         <%- require("../components/elements/search.ejs")() %>
                     </div>
-                    <div class="header__basket">
+                    <div class="header__basket" data-move="header-basket">
                         <%- require("../components/elements/basket.ejs")() %>
                     </div>
+
+                    <nav class="navbar-expand-sm navbar-light header__mobile">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </nav>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent" data-media-query="mobile-menu"></div>
                 </div>
             </div>
         </header>

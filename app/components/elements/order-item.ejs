@@ -7,9 +7,9 @@
             </div>
             <div class="order-delivery__number">№<%= item.orderDelivery.number %></div>
         </div>
-        <% if(item.orderDelivery.status !== 'inDelivery') { %>
+        <% if(item.orderDelivery.status === 'inDelivery') { %>
             <div class="order__callback">
-                <div class="callback"></div>
+                <%- require("./callback.ejs")() %>
             </div>
         <% } %>
         <div class="order-pay">

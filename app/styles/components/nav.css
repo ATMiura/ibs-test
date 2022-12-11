@@ -57,6 +57,7 @@
 .nav-link {
   padding: 0;
   color: inherit;
+  white-space: nowrap;
 }
 
 /*# sourceMappingURL=nav.css.map */

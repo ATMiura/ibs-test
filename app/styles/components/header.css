@@ -1,32 +1,199 @@
+@custom-media --mobile-xs (max-width: 480px);
+@custom-media --mobile-s (max-width: 650px);
+@custom-media --mobile (max-width: 800px);
+@custom-media --mobile-above (min-width: 751px);
+@custom-media --tablet-below (max-width: 900px);
+@custom-media --tablet (max-width: 1000px);
+@custom-media --tablet-above (max-width: 1280px);
+@custom-media --desktop (min-width: 1367px) and (max-width: 1920px);
+@custom-media --desktop-below (max-width: 1365px);
+@custom-media --desktop-above (max-width: 1439px);
+@custom-media --container-below (max-width: 1440px);
+@custom-media --full (width: 1920px);
+@custom-media --full-below (max-width: 1919px);
+@custom-media --height-700 (min-height: 700px);
+@custom-media --height-900 (min-height: 900px);
+@custom-media --height-1000 (min-height: 1000px);
+:root {
+  --c-black: black;
+  --c-white: white;
+  --c-white-1: #FAFAFA;
+  --c-white-2: #FBFBFB;
+  --c-green: #21A038;
+  --c-violet: #8168F0;
+  --c-red: #E9404A;
+  --c-yellow: #FFDF00;
+  --c-grey-1: #888888;
+  --c-grey-2: #8A8C94;
+  --c-grey-3: #B3B7C5;
+  --c-grey-4: #C4C4C4;
+  --c-grey-5: #DDDFE0;
+  --c-grey-6: #B7B3B3;
+  --c-grey-7: #C1C4C7;
+  --c-grey-8: #DBDCE1;
+  --c-grey-9: #F3F3F3;
+  --border: #F0F0F0;
+  --inputBg: #EDEDED;
+  --inputBorder: #CFCFCF;
+  --placeholder: #B6ACA0;
+  --boxShadow: 0px 30px 55px rgba(0, 0, 0, 0.1);
+  --borderRadius: 6px;
+  --transition: .2s;
+}
+
 .header {
-  margin-bottom: 36px;
+  margin-bottom: 58px;
+}
+@media (max-width: 991px) {
+  .header {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 575px) {
+  .header {
+    padding-top: 15px;
+  }
 }
 .header-top {
-  padding: 18px 0 13px;
+  padding: 20px 0 13px;
 }
 .header-top__row {
   justify-content: space-between;
+}
+@media (max-width: 575px) {
+  .header-top__row {
+    padding: 15px 0;
+  }
+}
+@media (max-width: 991px) {
+  .header-top__nav {
+    margin-bottom: 20px;
+  }
+  .header-top__nav .nav-list {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 575px) {
+  .header-top__nav .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
 }
 .header-top__right {
   display: flex;
   justify-content: flex-end;
 }
+@media (max-width: 991px) {
+  .header-top__right {
+    align-items: center;
+  }
+}
+@media (max-width: 575px) {
+  .header-top__right {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 991px) {
+  .header-top {
+    padding: 20px 0;
+  }
+}
+@media (max-width: 575px) {
+  .header-top {
+    padding: 0;
+  }
+}
 .header__phone {
   margin-right: 22px;
+}
+@media (max-width: 991px) {
+  .header__phone {
+    margin-right: auto;
+  }
+}
+@media (max-width: 575px) {
+  .header__phone {
+    margin-right: initial;
+    width: 100%;
+  }
+}
+@media (max-width: 991px) {
+  .header__user {
+    margin-right: 15px;
+  }
 }
 .header__logo {
   margin-right: 26px;
 }
+@media (max-width: 575px) {
+  .header__logo {
+    margin-right: 10px;
+  }
+}
 .header__catalog {
   margin-right: 12px;
+  max-width: 167px;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .header__catalog {
+    margin-right: 0;
+  }
+}
+@media (max-width: 575px) {
+  .header__catalog {
+    max-width: 150px;
+  }
 }
 .header__search {
   flex: 1 1;
   margin-right: 18px;
 }
+@media (max-width: 991px) {
+  .header__search {
+    margin-right: 0;
+  }
+}
+@media (max-width: 767px) {
+  .header__search {
+    flex: 0 0 100%;
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 575px) {
+  .header__search {
+    flex: 0 0 calc(100% - 60px);
+    margin-right: 10px;
+  }
+}
 .header-main__container {
   display: flex;
   align-items: center;
+}
+@media (max-width: 991px) {
+  .header-main__container {
+    flex-wrap: wrap;
+  }
+}
+.header-main .navbar-toggler {
+  border: 0;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  background: var(--c-violet);
+}
+.header-main .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+@media (max-width: 575px) {
+  .header__mobile {
+    margin-top: 20px;
+  }
 }
 
 /*# sourceMappingURL=header.css.map */

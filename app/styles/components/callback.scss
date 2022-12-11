@@ -20,5 +20,8 @@
 
   &__text {
     display: inline-block;
+    @include font18lh22;
+    font-weight: 600;
+    white-space: nowrap;
   }
 }
