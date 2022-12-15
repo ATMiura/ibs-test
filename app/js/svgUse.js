@@ -13,13 +13,13 @@ export default class SvgUse {
                     file = './icons.svg';
                     break;
                 default:
-                    file = `/app/assets/icons.svg`;
+                    file = `./icons.svg`;
                     break;
             }
 
             const revision = window.INLINE_SVG_REVISION || false;
 
-            if (window.SITE_TEMPLATE_PATH) file = `${SITE_TEMPLATE_PATH}/frontend/assets/icons.svg?revision=${revision ? revision : 0}`;
+            if (window.SITE_TEMPLATE_PATH) file = `${SITE_TEMPLATE_PATH}/assets/icons.svg?revision=${revision ? revision : 0}`;
 
             if( !document.createElementNS || !document.createElementNS( 'http://www.w3.org/2000/svg', 'svg' ).createSVGRect )
                 return true;
